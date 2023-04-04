@@ -7,7 +7,7 @@ public class Main {
 
     public static void main(String[] args) throws IOException {
         BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
-        BufferedWriter bw = new BufferedWriter(new OutputStreamWriter(System.out));
+        StringBuilder sb = new StringBuilder();
         int num = Integer.parseInt(br.readLine());
         stack = new int[num];
         StringTokenizer st;
@@ -18,27 +18,26 @@ public class Main {
                     push(Integer.parseInt(st.nextToken()));
                     break;
                 case "pop":
-                    bw.write(pop() + "\n");
+                    sb.append(pop()).append('\n');
                     break;
                 case "size":
-                    bw.write(size() + "\n");
+                    sb.append(size()).append('\n');
                     break;
                 case "empty":
-                    bw.write(empty() + "\n");
+                    sb.append(empty()).append('\n');
                     break;
                 case "top" :
-                    bw.write(top() + "\n");
+                    sb.append(top()).append('\n');
                     break;
             }
         }
-        bw.flush();
-        bw.close();
+        System.out.println(sb);
     }
 
     public static void push(int x){
         stack[sp] = x;
         sp++;
-      
+
     }
     public static int pop(){
         if(sp==0){
