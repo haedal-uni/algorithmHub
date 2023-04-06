@@ -1,6 +1,5 @@
 import java.io.*;
 import java.util.StringTokenizer;
-
 public class Main {
     public static void main(String[] args) throws IOException {
         BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
@@ -9,9 +8,7 @@ public class Main {
         Long a = Long.parseLong(st.nextToken());
         Long b =Long.parseLong(st.nextToken());
         Long num = A(a,b);
-        for(Long i=0L; i<num; i++){
-            bw.write("1");
-        }
+        bw.write("1".repeat(Math.toIntExact(num)));
         bw.flush();
         bw.close();
     }
