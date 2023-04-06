@@ -1,12 +1,13 @@
 class Solution {
     public int solution(int n) {
-        int answer = 1;
-        while(true){
-            if(6*answer%n==0){
-                break;
-            }
-            answer++;
-        }
-        return answer;
+        return B(n, 6)/6;
+    }
+    public int A(int a, int b){
+        if(a%b==0){
+            return b;
+        } return A(b, a%b);
+    }
+    public int B(int a, int b){
+        return a*b/A(a,b);
     }
 }
