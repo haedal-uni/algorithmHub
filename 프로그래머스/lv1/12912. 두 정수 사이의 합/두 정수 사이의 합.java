@@ -1,12 +1,9 @@
 class Solution {
     public long solution(int a, int b) {
         long answer = 0;
-        if(a>b){
-            int temp = a;
-            a=b;
-            b=temp;
-        }
-        for(int i=a; i<b+1; i++){
+        int start = Math.min(a, b);
+        int end = Math.max(a, b);
+        for(int i=start; i<end+1; i++){
             answer+=i;
         }
         return answer;
