@@ -1,11 +1,12 @@
 class Solution {
     public static int x=0;
-    public static int y=0;
     public int solution(int left, int right) {
+        int sum = 0;
         for(int i=left; i<right+1; i++){
+            sum+=i;
             a(i);
         }
-        return x-y;
+        return x-(sum-x);
     }
     public void a(int a){
         int answer=0;
@@ -16,8 +17,6 @@ class Solution {
         }
         if(answer%2==0){
             x += a;
-        }else{
-            y += a;
         }
     }
 }
