@@ -1,4 +1,3 @@
-import java.lang.*;
 class Solution {
     public int[] solution(String myString) {       
         String[] str = myString.split("x",-1);
