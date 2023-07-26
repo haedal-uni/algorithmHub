@@ -1,12 +1,11 @@
-import java.io.*;
-import java.util.*;
+import java.util.Scanner;
 import java.lang.*;
+
 public class Solution {
-    public static void main(String[] args) throws IOException{
-        BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
-        StringTokenizer st = new StringTokenizer(br.readLine());
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
         StringBuilder sb = new StringBuilder();
-        String a = st.nextToken();
+        String a = sc.next();
         String b = "";
         for(int i=0; i<a.length(); i++){
             b = a.split("")[i];
@@ -16,6 +15,6 @@ public class Solution {
                 sb.append(b.toLowerCase());
             }
         }
-        System.out.println(sb.toString());
+        System.out.print(sb.toString());
     }
 }
