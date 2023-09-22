@@ -4,7 +4,6 @@ class Solution {
         int[] answer = {};
         int num = 0;
         List<Integer> list = new ArrayList<>();
-        StringBuilder sb = new StringBuilder();
         for(int i=0; i<intStrs.length; i++){
             num = Integer.parseInt(intStrs[i].substring(s, s+l));
             if(num>k){
