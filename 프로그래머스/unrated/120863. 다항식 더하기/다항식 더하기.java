@@ -1,6 +1,6 @@
 class Solution {
     public String solution(String polynomial) {
-        String answer = "";
+        StringBuilder sb = new StringBuilder();
         int x = 0;
         int num = 0;
         String[] ans = polynomial.split(" ");
@@ -17,19 +17,19 @@ class Solution {
         }
         if(x > 1){
             if(num > 0){
-                answer += x + "x" + " + " + num ;
+                sb.append(x).append("x").append(" + ").append(num);
             }else{
-                answer += x + "x";
+                sb.append(x).append("x");
             }
         }else if(x==1){
             if(num > 0){
-                answer += "x" + " + " + num ;
+                sb.append("x").append(" + ").append(num);
             }else{
-                answer += "x";
+                sb.append("x");
             }
         }else{
-            answer += "" + num;
+            sb.append(num);
         }
-        return answer;
+        return sb.toString();
     }
 }
