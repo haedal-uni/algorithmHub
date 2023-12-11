@@ -1,6 +1,6 @@
 # [level unrated] 뒤에서 5등까지 - 181853 
 
-[문제 링크](https://school.programmers.co.kr/learn/courses/30/lessons/181853?language=python3) 
+[문제 링크](https://school.programmers.co.kr/learn/courses/30/lessons/181853) 
 
 ### 성능 요약
 
@@ -16,7 +16,7 @@
 
 ### 제출 일자
 
-2023년 12월 2일 2:16:50
+2023년 12월 2일 2:19:17
 
 ### 문제 설명
 
