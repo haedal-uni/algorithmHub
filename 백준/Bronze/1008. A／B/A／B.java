@@ -7,6 +7,7 @@ public class Main{
         StringTokenizer st = new StringTokenizer(br.readLine(), " ");
         double a = Double.parseDouble(st.nextToken());
         double b = Double.parseDouble(st.nextToken());
-        System.out.printf("%.9f", a/b);
+        double result = Math.round((a/b) * 1000000000)/1000000000.0;
+        System.out.println(result);
     }
 }
