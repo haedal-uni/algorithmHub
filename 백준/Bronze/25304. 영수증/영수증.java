@@ -4,6 +4,7 @@ public class Main{
     public static void main(String[] args) throws IOException {
         BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
         StringTokenizer st;
+        StringBuilder sb = new StringBuilder();
         int total = Integer.parseInt(br.readLine());
         int num = Integer.parseInt(br.readLine());
         int a=0;
@@ -15,9 +16,10 @@ public class Main{
             total-= a*b;
         }
         if(total==0){
-            System.out.print("Yes");
+            sb.append("Yes");
         }else{
-            System.out.print("No");
+            sb.append("No");
         }
+        System.out.print(sb);
     }
 }
