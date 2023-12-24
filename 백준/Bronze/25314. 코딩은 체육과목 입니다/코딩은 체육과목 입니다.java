@@ -4,10 +4,7 @@ public class Main{
         BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
         int num = Integer.parseInt(br.readLine());
         StringBuilder sb = new StringBuilder();
-        for(int i=0; i<num/4; i++){
-            sb.append("long ");
-        }
-        sb.append("int");
+        sb.append("long ".repeat(num/4)).append("int");
         System.out.print(sb);
     }
 }
