@@ -6,8 +6,7 @@ public class Main{
         StringTokenizer st;
         StringBuilder sb = new StringBuilder();
         int num = Integer.parseInt(br.readLine());
-        int a = 0;
-        int b = 0;
+        int a, b = 0;
         for (int i=0; i<num; i++) {
             st = new StringTokenizer(br.readLine()," ");
             a = Integer.parseInt(st.nextToken());
