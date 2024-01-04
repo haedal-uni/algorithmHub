@@ -1,6 +1,5 @@
 import java.io.*;
 public class Main {
-    static int num = 0;
     public static void main(String[] args) throws IOException {
         BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
         int x = Integer.parseInt(br.readLine());
@@ -17,20 +16,19 @@ public class Main {
                     if(count!=0){
                         answer += num(count);
                         count = 0;
-                        num=0;
                     }
                 }
             }
             if(count!=0){
                 answer += num(count);
                 count = 0;
-                num = 0;
             }
             System.out.println(answer);
         }
     }
 
     public static int num(int n) {
+        int num = 0;
         if (n==0) {
             return num;
         }
