@@ -4,7 +4,7 @@ public class Main {
         BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
         int answer = 0;
         String x = br.readLine().strip();
-        if(x.replace(" ","").length()!=0){
+        if(!x.isEmpty()){
             String[] y = x.split(" ");
             answer = y.length;
         }
