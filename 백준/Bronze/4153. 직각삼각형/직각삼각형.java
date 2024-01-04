@@ -4,9 +4,7 @@ public class Main {
         BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
         StringBuilder sb = new StringBuilder();
         String[] x;
-        int a = 0;
-        int b = 0;
-        int c = 0;
+        int a,b,c = 0;
         while (true){
             x= br.readLine().split(" ");
             a = Integer.parseInt(x[0]);
