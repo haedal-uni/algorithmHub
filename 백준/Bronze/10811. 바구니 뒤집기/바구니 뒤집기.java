@@ -11,7 +11,7 @@ public class Main {
         int x = Integer.parseInt(st.nextToken());
         int y = Integer.parseInt(st.nextToken());
         int[] list = new int[x+1];
-        List<Integer> num = new ArrayList<>();
+
         for(int i=1; i<x+1; i++){
             list[i] = i;
         }
@@ -19,16 +19,13 @@ public class Main {
             st = new StringTokenizer(br.readLine(), " ");
             a = Integer.parseInt(st.nextToken());
             b = Integer.parseInt(st.nextToken());
-            for(int j=a; j<b+1; j++){
-                num.add(list[j]);
+            while(a<b){
+                c = list[a];
+                list[a] = list[b];
+                list[b] = c;
+                a++;
+                b--;
             }
-            Collections.reverse(num);
-            for(int j=a; j<b+1; j++){
-                list[j] = num.get(c);
-                c++;
-            }
-            c = 0;
-            num.clear();
         }
         for(int i=1; i<x+1;i++){
             sb.append(list[i] + " ");
