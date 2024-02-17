@@ -6,14 +6,19 @@ public class Main {
         List<Integer> list =new ArrayList<>();
         int a = Integer.parseInt(br.readLine());
         String[] str = br.readLine().split(" ");
+        int max = 0;
         double num = 0;
+        int x = 0;
         for(int i=0; i<a; i++){
-            list.add(Integer.parseInt(str[i]));
+            x = Integer.parseInt(str[i]);
+            list.add(x);
+            if(max<x){
+                max=x;
+            }
         }
-        Collections.sort(list);
-        for(int i=0; i<list.size(); i++){
-            num += list.get(i)*100.0/ list.get(list.size()-1);
+        for(int i=0; i<a; i++){
+            num += list.get(i)*100.0/ max;
         }
-        System.out.println(num/list.size());
+        System.out.println(num/a);
     }
 }
