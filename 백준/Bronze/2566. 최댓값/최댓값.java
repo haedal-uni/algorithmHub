@@ -3,6 +3,7 @@ import java.util.*;
 public class Main {
     public static void main(String[] args) throws IOException {
         BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
+        StringBuilder sb = new StringBuilder();
         String[] st;
         List<String> list = new ArrayList<>();
         int max = 0;
@@ -18,7 +19,7 @@ public class Main {
             }
             list.clear();
         }
-        System.out.println(max);
-        System.out.println(x[0] + " " + x[1]);
+        sb.append(max).append("\n").append(x[0]).append(" ").append(x[1]);
+        System.out.println(sb);
     }
 }
