@@ -15,9 +15,8 @@ public class Main {
             if(max<Integer.parseInt(st[8])){
                 max = Integer.parseInt(st[8]);
                 x[0] = i+1;
-                x[1] = list.indexOf(st[8])+1;
+                x[1] = list.indexOf(st[8])+1-i*9;
             }
-            list.clear();
         }
         sb.append(max).append("\n").append(x[0]).append(" ").append(x[1]);
         System.out.println(sb);
