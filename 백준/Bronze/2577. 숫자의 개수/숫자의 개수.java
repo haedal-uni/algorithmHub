@@ -8,7 +8,7 @@ public class Main {
         int c = Integer.parseInt(br.readLine());
         int[] x = new int[10];
         String[] y;
-        y = ((a*b*c) + "").split("");
+        y = String.valueOf(a*b*c).split("");
         for(int i=0; i<y.length; i++){
             x[Integer.parseInt(y[i])] = ++x[Integer.parseInt(y[i])];
         }
