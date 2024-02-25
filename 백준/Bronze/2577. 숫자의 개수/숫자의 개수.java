@@ -6,13 +6,11 @@ public class Main {
         int a = Integer.parseInt(br.readLine());
         int b = Integer.parseInt(br.readLine());
         int c = Integer.parseInt(br.readLine());
-        int count = 0;
         int[] x = new int[10];
         String[] y;
         y = ((a*b*c) + "").split("");
         for(int i=0; i<y.length; i++){
-            count = x[Integer.parseInt(y[i])];
-            x[Integer.parseInt(y[i])] = count+1;
+            x[Integer.parseInt(y[i])] = ++x[Integer.parseInt(y[i])];
         }
         sb.append(x[0]).append("\n")
                 .append(x[1]).append("\n")
