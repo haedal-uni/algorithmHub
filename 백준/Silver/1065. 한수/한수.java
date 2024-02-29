@@ -1,14 +1,14 @@
 import java.io.*;
 public class Main {
+
     public static void main(String[] args) throws IOException {
         BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
-        int x = Integer.parseInt(br.readLine());
+        System.out.print(d(Integer.parseInt(br.readLine())));
+    }
+    public static int d(int x) {
         int count = 0;
-        int df = 0;
-        String ans = "o";
-        String[] st;
-        if(x<100){
-            count = x;
+        if (x < 100) {
+            return x;
         }else if(x<122){
             if(x>110){
                 count=100;
@@ -16,22 +16,17 @@ public class Main {
                 count=99;
             }
         }
-        else{
-            count+=100;
-            for(int i=123; i<x+1; i++){
-                st = String.valueOf(i).split("");
-                for(int j=1; j<st.length-1; j++){
-                   df = Integer.parseInt(st[0]) - Integer.parseInt(st[1]);
-                   if(Integer.parseInt(st[j])-Integer.parseInt(st[j+1])!=df){
-                       ans = "x";
-                   }
-                }
-                if(!ans.equals("x")){
+        else {
+            count = 100;
+            for (int i=123; i<x+1; i++) {
+                int a = i/100;
+                int b = (i/10)%10;
+                int c = i%10;
+                if ((a-b) == (b-c)) {
                     count++;
                 }
-                ans="";
             }
         }
-        System.out.println(count);
+        return count;
     }
 }
