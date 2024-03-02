@@ -15,7 +15,7 @@ public class Main {
         } else {
             while (true) {
                 y = 6 * (n + 1) + x;
-            if (x <= num && y >= num) {
+            if (y >= num) {
                     System.out.println(n + 2);
                     break;
                 }
