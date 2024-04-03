@@ -6,6 +6,9 @@ public class Main {
         int count = 1;
         String[] ans = {"SK","CY"};
         while (x!=0){
+            if(x%3==0){
+                x/=3;
+            }
             if(x-3>0){
                 x-=3;
             }else{
