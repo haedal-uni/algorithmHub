@@ -5,19 +5,16 @@ public class Main {
         BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
         StringTokenizer st = new StringTokenizer(br.readLine()," ");
         int x = Integer.parseInt(st.nextToken());
-        String y = st.nextToken();
+        int y = Integer.parseInt(st.nextToken());
+        int z = 0;
         int count = 0;
-        String[] z;
-        for(int i=1;i<x+1; i++){
-            if((i+"").contains(y) && i>9){
-                z = (i+"").split("");
-                for(int j = 0; j< z.length; j++){
-                    if(z[j].equals(y)){
-                       count++;
-                    }
+        for(int i=1; i<x+1; i++){
+            z = i;
+            while (z>0){
+                if(z%10==y){
+                    count++;
                 }
-            }else if((i+"").contains(y)){
-                count++;
+                z/=10;
             }
         }
         System.out.println(count);
