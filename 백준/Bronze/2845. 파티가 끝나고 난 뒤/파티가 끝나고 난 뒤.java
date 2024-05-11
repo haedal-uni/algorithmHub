@@ -5,9 +5,7 @@ public class Main {
         BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
         StringTokenizer st = new StringTokenizer(br.readLine()," ");
         StringBuilder sb = new StringBuilder();
-        int n = Integer.parseInt(st.nextToken());
-        int m = Integer.parseInt(st.nextToken());
-        int x = n*m;
+        int x = Integer.parseInt(st.nextToken())*Integer.parseInt(st.nextToken());
         String[] p = br.readLine().split(" ");
         for(int i=0; i<5; i++){
             sb.append(Integer.parseInt(p[i])-x).append(" ");
