@@ -11,7 +11,7 @@ public class Main {
         int x = 0;
         for(int i=0; i<n; i++){
             x = Integer.parseInt(br.readLine());
-            if((w*w)+(h*h)>=x*x){
+            if(Math.pow(w,2)+Math.pow(h,2)>=x*x){
                 sb.append("DA").append("\n");
             } else{
                 sb.append("NE").append("\n");
