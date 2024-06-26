@@ -4,26 +4,21 @@ public class Main {
     public static void main(String[] args) throws IOException {
         BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
         StringTokenizer st = new StringTokenizer(br.readLine(),":");
-        int h1 = Integer.parseInt(st.nextToken());
-        int m1 = Integer.parseInt(st.nextToken());
-        int s1 = Integer.parseInt(st.nextToken());
+        int h = Integer.parseInt(st.nextToken());
+        int m = Integer.parseInt(st.nextToken());
+        int s = Integer.parseInt(st.nextToken());
         st = new StringTokenizer(br.readLine(),":");
-        int h2 = Integer.parseInt(st.nextToken());
-        int m2 = Integer.parseInt(st.nextToken());
-        int s2 = Integer.parseInt(st.nextToken());
-        int s = s2-s1;
-        int m = 0;
-        int h = 0;
+        h = Integer.parseInt(st.nextToken())-h;
+        m = Integer.parseInt(st.nextToken())-m;
+        s = Integer.parseInt(st.nextToken())-s;
         if(s<0){
             s = 60+s;
-            m2-=1;
+            m-=1;
         }
-        m = m2-m1;
         if(m<0){
             m = 60+m;
-            h2-=1;
+            h-=1;
         }
-        h = h2-h1;
         if(h<0){
             h+=24;
         }
