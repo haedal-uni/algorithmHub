@@ -4,12 +4,12 @@ public class Main {
     public static void main(String[] args) throws IOException {
         BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
         StringTokenizer st = new StringTokenizer(br.readLine());
+        st.nextToken();
         int a = Integer.parseInt(st.nextToken());
         int b = Integer.parseInt(st.nextToken());
-        int c = Integer.parseInt(st.nextToken());
-        if(b==c){
+        if(a==b){
             System.out.println("Anything");
-        }else if(c>b){
+        }else if(b>a){
             System.out.println("Bus");
         }else{
             System.out.println("Subway");
