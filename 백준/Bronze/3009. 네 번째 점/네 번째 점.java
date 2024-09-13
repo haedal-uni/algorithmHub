@@ -5,46 +5,30 @@ public class Main {
         BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
         StringBuilder sb = new StringBuilder();
         StringTokenizer st = new StringTokenizer(br.readLine(), " ");
-        int[] arr1 = new int[4];
-        int[] arr2 = new int[4];
-        arr1[0] = Integer.parseInt(st.nextToken());
-        arr2[0] = Integer.parseInt(st.nextToken());
-        int x = 0;
-        int y = 0;
-
-        for(int i=0; i<2; i++){
-            st = new StringTokenizer(br.readLine(), " ");
-            x = Integer.parseInt(st.nextToken());
-            y = Integer.parseInt(st.nextToken());
-            if (arr1[0] == x) {
-                arr1[1] = x;
-            } else {
-                arr1[i+2] = x;
-            }
-            if (arr2[0] == y) {
-                arr2[1] = y;
-            } else {
-                arr2[i+2] = y;
+        int x = Integer.parseInt(st.nextToken());
+        int y = Integer.parseInt(st.nextToken());
+        st = new StringTokenizer(br.readLine()," ");
+        int a = Integer.parseInt(st.nextToken());
+        int b = Integer.parseInt(st.nextToken());
+        st = new StringTokenizer(br.readLine()," ");
+        int i = Integer.parseInt(st.nextToken());
+        int j = Integer.parseInt(st.nextToken());
+        if(x==a){
+            sb.append(i).append(" ");
+        }else{
+            if(a==i){
+                sb.append(x).append(" ");
+            }else{
+                sb.append(a).append(" ");
             }
         }
-
-        if (arr1[1] == 0) {
-            sb.append(arr1[0]).append(" ");
-        } else {
-            if(arr1[2]==0){
-                sb.append(arr1[3]).append(" ");
+        if(y==b){
+            sb.append(j);
+        }else{
+            if(b==j){
+                sb.append(y);
             }else{
-                sb.append(arr1[2]).append(" ");
-            }
-        }
-
-        if (arr2[1] == 0) {
-            sb.append(arr2[0]).append(" ");
-        } else {
-            if(arr2[2]==0){
-                sb.append(arr2[3]).append(" ");
-            }else{
-                sb.append(arr2[2]).append(" ");
+                sb.append(b);
             }
         }
         System.out.println(sb);
