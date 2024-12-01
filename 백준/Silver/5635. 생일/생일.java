@@ -7,7 +7,6 @@ public class Main {
         StringBuilder sb = new StringBuilder();
         StringBuilder a = new StringBuilder();
         StringBuilder b = new StringBuilder();
-        StringBuilder c = new StringBuilder();
         int n = Integer.parseInt(br.readLine());
         int x = 0;
         int young = 19890101;
