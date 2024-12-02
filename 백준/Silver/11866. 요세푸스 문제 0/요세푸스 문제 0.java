@@ -12,15 +12,14 @@ public class Main {
         for(int j=1; j<n+1; j++){
             list.add(j);
         }
+        sb.append("<");
         while(!list.isEmpty()){
             i = (i+k-1)%list.size();
-            sb.append(list.get(i));
-            list.remove(i);
+            sb.append(list.remove(i));
             if(!list.isEmpty()){
                 sb.append(", ");
             }
         }
-        sb.insert(0,"<");
         sb.append(">");
         System.out.print(sb);
     }
