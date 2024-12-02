@@ -13,14 +13,11 @@ public class Main {
             list.add(j);
         }
         sb.append("<");
-        while(!list.isEmpty()){
+        while(list.size()>1){
             i = (i+k-1)%list.size();
-            sb.append(list.remove(i));
-            if(!list.isEmpty()){
-                sb.append(", ");
-            }
+            sb.append(list.remove(i)).append(", ");
         }
-        sb.append(">");
+        sb.append(list.get(0)).append(">");
         System.out.print(sb);
     }
 }
