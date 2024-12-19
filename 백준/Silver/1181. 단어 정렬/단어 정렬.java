@@ -6,29 +6,29 @@ public class Main {
         List<String> list = new ArrayList<>();
         StringBuilder sb = new StringBuilder();
         int n = Integer.parseInt(br.readLine());
-        boolean change = false;
         int len = 0;
+        boolean changed;
         for(int i=0; i<n; i++){
-            change = false;
             String x = br.readLine();
             if(list.contains(x)){
                 continue;
             }
             len = x.length();
+            changed=false;
             for(int j=0; j<list.size(); j++){
-                if(len<list.get(j).length() && !change){
+                if(len<list.get(j).length()){
                     list.add(j,x);
-                    change = true;
+                    changed=true;
                     break;
-                }else if(len==list.get(j).length() && !change){
-                    String y = list.get(j);
-                    if(x.compareTo(y)<0){
+                }else if(len==list.get(j).length()){
+                    if(x.compareTo(list.get(j))<0){
                         list.add(j,x);
-                        change = true;
+                        changed=true;
+                        break;
                     }
                 }
             }
-            if(!change){
+            if(!changed){
                 list.add(x);
             }
         }
