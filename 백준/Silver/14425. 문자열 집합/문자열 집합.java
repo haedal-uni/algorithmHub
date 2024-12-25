@@ -4,20 +4,19 @@ public class Main {
     public static void main(String[] args) throws IOException {
         BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
         StringTokenizer st = new StringTokenizer(br.readLine());
-        List<String> list = new ArrayList<>();
+        HashMap<String, Integer> map = new HashMap<>();
         int n = Integer.parseInt(st.nextToken());
         int m = Integer.parseInt(st.nextToken());
-        String x;
-        int sum = 0;
+        int count = 0;
         for(int i=0; i<n; i++) {
-            list.add(br.readLine());
+            map.put(br.readLine(), 0);
         }
         for(int i=0; i<m; i++) {
-            x = br.readLine();
-            if(list.contains(x)) {
-                sum++;
+            String x = br.readLine();
+            if(map.containsKey(x)) {
+                count++;
             }
         }
-        System.out.print(sum);
+        System.out.print(count);
     }
 }
