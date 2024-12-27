@@ -13,17 +13,16 @@ public class Main {
             }else{
                 map.put(s, 1);
             }
+            if(map.get(s)>max){
+                max = map.get(s);
+            }
         }
         List<String> list = new ArrayList<>(map.keySet());
-        String x = "";
+        String x = "z".repeat(51);
         for (String string : list) {
-            if (map.get(string) > max) {
-                max = map.get(string);
-                  x = string;
-            }else if(map.get(string) == max){
+            if (map.get(string) == max) {
                 if(string.compareTo(x)<0){
                     x = string;
-                    max = map.get(string);
                 }
             }
         }
