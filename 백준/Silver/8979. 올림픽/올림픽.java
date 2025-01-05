@@ -6,43 +6,36 @@ public class Main {
         StringTokenizer st = new StringTokenizer(br.readLine());
         int n = Integer.parseInt(st.nextToken());
         int k = Integer.parseInt(st.nextToken());
-        Map<Integer,Integer> map = new HashMap<>();
-        StringBuilder sb = new StringBuilder();
-        int key = 0;
-        int value = 0;
-        for(int i=0; i<n; i++) {
+        List<int[]> countries = new ArrayList<>();
+        for (int i=0; i<n; i++) {
             st = new StringTokenizer(br.readLine());
-            key = Integer.parseInt(st.nextToken());
-            sb.append(st.nextToken()).append(st.nextToken()).append(st.nextToken());
-            value = Integer.parseInt(sb.toString());
-            map.put(key,value);
-            sb.delete(0,sb.length());
+            int country = Integer.parseInt(st.nextToken());
+            int gold = Integer.parseInt(st.nextToken());
+            int silver = Integer.parseInt(st.nextToken());
+            int bronze = Integer.parseInt(st.nextToken());
+            countries.add(new int[]{country, gold, silver, bronze});
         }
-        List<Map.Entry<Integer,Integer>> list = new ArrayList<>(map.entrySet());
-        list.sort(Map.Entry.comparingByValue(Comparator.reverseOrder()));
-        int rank = 0;
-        boolean same = false;
-        int count = 0;
-        int x = 0;
-        int y = 0;
-        for(Map.Entry<Integer,Integer> entry : list) {
-            x = entry.getValue();
-            if(same){
-                rank+=count;
-                same = false;
-                count=0;
+        countries.sort((a, b) -> {
+            if(a[1]!=b[1]) {
+                return b[1]-a[1];
+            } else if(a[2]!=b[2]) {
+                return b[2]-a[2];
+            } else{
+                return b[3]-a[3];
             }
-            if(x!=y){
-                rank++;
-            }else{
-                same = true;
-                count++;
+        });
+        int rank = 1;
+        for(int i=0; i<countries.size(); i++) {
+            if(i>0 && !isSame(countries.get(i-1),countries.get(i))) {
+                rank=i+1;
             }
-            y=x;
-            if(entry.getKey()==k){
+            if(countries.get(i)[0] == k) {
                 break;
             }
         }
         System.out.print(rank);
+    }
+    private static boolean isSame(int[] a, int[] b) {
+        return a[1]==b[1] && a[2]==b[2] && a[3]==b[3];
     }
 }
