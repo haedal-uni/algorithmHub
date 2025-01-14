@@ -34,8 +34,6 @@ public class Main {
             if(!Character.isLetter(c) && c!='_') {
                 return false;
             }
-        }
-        for(char c:s.toCharArray()) {
             if (Character.isUpperCase(c)) {
                 return false;
             }
