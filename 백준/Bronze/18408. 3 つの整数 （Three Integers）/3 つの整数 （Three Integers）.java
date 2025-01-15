@@ -7,7 +7,7 @@ public class Main {
         int one = 0;
         int two = 0;
         for(int i=0; i<3; i++){
-            if(Integer.parseInt(st.nextToken()) == 1){
+            if(st.nextToken().equals("1")){
                 one++;
             }else{
                 two++;
