@@ -12,7 +12,7 @@ public class Main {
             sb.append("VladSaturnian").append("\n");
         }
         if(a<3 && b<4){
-            sb.append("GraemeMercurian").append("\n");
+            sb.append("GraemeMercurian");
         }
         System.out.print(sb);
     }
