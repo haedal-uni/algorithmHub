@@ -10,19 +10,16 @@ public class Main {
             arr[i] = Integer.parseInt(st.nextToken());
         }
         int i=0;
-        int temp = 0;
-        while (true){
-            if(arr[0]==1&&arr[1]==2&&arr[2]==3&&arr[3]==4&&arr[4]==5){
-                break;
-            }
-            if(arr[i]>arr[i+1]){
+        int temp=0;
+        while (arr[0]!=1 || arr[1]!=2 || arr[2]!=3 || arr[3]!=4 || arr[4]!=5) {
+            if (arr[i]>arr[i+1]) {
                 temp = arr[i];
                 arr[i] = arr[i+1];
                 arr[i+1] = temp;
                 sb.append(arr[0]).append(" ").append(arr[1]).append(" ").append(arr[2]).append(" ").append(arr[3]).append(" ").append(arr[4]).append("\n");
             }
             i++;
-            if(i==4){
+            if (i==4) {
                 i=0;
             }
         }
