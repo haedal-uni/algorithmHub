@@ -8,7 +8,6 @@ public class Main {
             int x = Integer.parseInt(br.readLine());
             int y = 0;
             int z = 0;
-            int count = 0;
             sb.append("Pairs for ").append(x).append(": ");
             while (true){
                 y+=1;
@@ -16,11 +15,10 @@ public class Main {
                 if(y==z || y>z){
                     break;
                 }
-                if(count>0){
+                if(y>1){
                     sb.append(", ");
                 }
                 sb.append(y).append(" ").append(z);
-                count++;
             }
             sb.append("\n");
         }
