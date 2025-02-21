@@ -27,7 +27,7 @@ public class Main {
                 sb.append(temp);
             }
         }
-        System.out.println(count);
+        sb.insert(0, count+"\n");
         System.out.print(sb);
     }
 }
