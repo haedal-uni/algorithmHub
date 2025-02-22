@@ -5,11 +5,12 @@ public class Main {
         BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
         StringBuilder sb = new StringBuilder();
         int t = Integer.parseInt(br.readLine());
+        int count = 0;
         for(int i=0; i<t; i++){
             StringTokenizer st = new StringTokenizer(br.readLine());
             int n = Integer.parseInt(st.nextToken());
             int d = Integer.parseInt(st.nextToken());
-            int count = 0;
+            count = 0;
             for(int j=0; j<n; j++){
                 st = new StringTokenizer(br.readLine());
                 int v = Integer.parseInt(st.nextToken());
