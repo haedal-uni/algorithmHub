@@ -6,8 +6,8 @@ public class Main {
         int[] arr = {1, 0, 0, 4};
         String[] x = br.readLine().split("");
         int temp = 0;
-        for(int i=0; i<x.length; i++){
-            switch(x[i]){
+        for (String s : x) {
+            switch (s) {
                 case "A":
                     temp = arr[0];
                     arr[0] = arr[1];
@@ -27,7 +27,7 @@ public class Main {
                     temp = arr[1];
                     arr[1] = arr[2];
                     arr[2] = temp;
-                     break;
+                    break;
                 case "E":
                     temp = arr[1];
                     arr[1] = arr[3];
