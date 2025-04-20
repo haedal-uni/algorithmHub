@@ -7,11 +7,11 @@ public class Main {
         StringBuilder x = new StringBuilder();
         StringBuilder y = new StringBuilder();
         x.append("@@@@@".repeat(n)).append("\n");
-        sb.append(x.toString().repeat(n));
+        sb.append(String.valueOf(x).repeat(n));
         y.append("@".repeat(n)).append("\n");
-        sb.append(y.toString().repeat(n));
+        sb.append(String.valueOf(y).repeat(n));
         sb.append(sb);
-        sb.append(y.toString().repeat(n));
+        sb.append(String.valueOf(y).repeat(n));
         System.out.print(sb);
     }
 }
