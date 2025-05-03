@@ -5,13 +5,13 @@ public class Main {
         String[] x = br.readLine().split("");
         int count = 0;
         int y = 0;
-        for(int i=0; i<x.length; i++){
-            if(x[i].charAt(0)==97||x[i].charAt(0)==101||x[i].charAt(0)==105||x[i].charAt(0)==111||x[i].charAt(0)==117){
+        for (String s : x) {
+            if(s.charAt(0)==97||s.charAt(0)==101||s.charAt(0)==105||s.charAt(0)==111||s.charAt(0)==117){
                 count++;
-            }else if(x[i].charAt(0)==121){
+            }else if(s.charAt(0)==121){
                 y++;
             }
         }
-        System.out.println(count+" "+(y+count));
+        System.out.print(count+" "+(y+count));
     }
 }
