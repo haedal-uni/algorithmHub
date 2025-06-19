@@ -7,20 +7,22 @@ public class Main {
         StringTokenizer st = new StringTokenizer(br.readLine());
         int m = 0;
         int x = 0;
+        int a = 0;
+        int b = 0;
         int sum = 0;
         for(int i=0; i<n; i++){
             x = Integer.parseInt(st.nextToken());
             if(x==0){
                 m++;
             }else if(x==1){
-                sum++;
+                a++;
             }else{
-                sum--;
+                b++;
             }
         }
-        if(n/2<m){
+        if(m*2>=n){
             System.out.print("INVALID");
-        }else if(sum>0){
+        }else if(a>b){
             System.out.print("APPROVED");
         }else{
             System.out.print("REJECTED");
